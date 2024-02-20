@@ -18,6 +18,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+
     "types": [
       "../@repo/global.d.ts"
     ],
@@ -27,5 +28,8 @@
       "@repo/*": ["../@repo/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "ts-node": {
+    "esm": true
+  }
 }
