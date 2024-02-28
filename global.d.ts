@@ -8,3 +8,5 @@ type Rewrite<O1 extends Record<string, unknown>, O2 extends Record<string, unkno
 type Symbolize<BasicType, ID> = BasicType & {
   __SYMBOL__: ID
 }
+
+type ArrToOr<T> = T extends readonly [infer Cur, ...infer Rest] ? Cur | ArrToOr<Rest> : never
